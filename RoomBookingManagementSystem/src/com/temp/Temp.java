@@ -1,5 +1,9 @@
 package com.temp;
-
+/**
+ * Demo class to check commit messages 
+ * @author vinoth
+ *
+ */
 public class Temp {
 
 	public void tr()
