@@ -4,7 +4,7 @@ public class Temp {
 
 	public void tr()
 	{
-		//Do nothing
+		System.out.println("tr tr ");
 	}
 	
 	private void Psvm() {
