@@ -6,12 +6,14 @@ package com.temp;
  */
 public class Temp {
 
+	//Method added 
 	public void tr()
 	{
 		System.out.println("tr tr ");
 	}
 	
 	private void Psvm() {
-		System.out.println("hiihih");
+		System.out.println("hiih");
+		Temp jj=new Temp();
 	}
 }
