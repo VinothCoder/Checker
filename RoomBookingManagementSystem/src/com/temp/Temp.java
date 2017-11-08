@@ -5,13 +5,15 @@ package com.temp;
  */
 public class Temp {
 
-	public void newMethod()
+	public int newMethod()
 	{
 		//Do nothing
+		int d=3/6;
+		return d;
 	}
 
 	private void Psvm() {
-		System.out.println("hiih");
+		System.out.println("hi hhh ih");
 		Temp jj=new Temp();
 	}
 }
