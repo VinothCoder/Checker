@@ -1,4 +1,8 @@
 package com.temp;
+/*
+ * 
+ * Class for checking git hub 
+ */
 public class Temp {
 
 	public void newMethod()
