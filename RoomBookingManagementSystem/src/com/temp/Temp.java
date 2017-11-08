@@ -11,6 +11,10 @@ public class Temp {
 		int d=3/6;
 		return d;
 	}
+	private Temp()
+	{
+		//Private constructor added 
+	}
 
 	private void Psvm() {
 		System.out.println("hi hhh ih");
