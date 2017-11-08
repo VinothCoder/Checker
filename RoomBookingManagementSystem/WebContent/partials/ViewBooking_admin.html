@@ -1,0 +1,100 @@
+<!-- This is a partial page. View Booking Admin-->
+
+    
+      <div align="center" ng-controller='RoomListCtrl_admin'>
+		<h2 ng-style="{'font-style': 'italic','color':'red'}"
+			>{{viewRoom}}</h2>           
+           <h3 style="color:darkmagenta">Hi {{username}}, Welcome!!!</h3>
+                	<div>
+			<table border="0">
+			<tr>
+				<td>View Booking</td>
+				<td>:<select ng-model="show_item" class="select" >
+						<option value="" selected="selected">All Rooms</option>
+						<option value="available">Available Rooms</option>
+				</select></td>
+			</tr>
+				<tr>
+					<td>Search Booking</td>
+					<td>:<input type='text' ng-model="search_item" class="txt" /></td>
+				</tr>
+				<tr>
+					<td>Sort Booking</td>
+					<td>:<select ng-model="order_item" class="select" ng-change="changeView(order_item)">
+						<option value="roomId">Room Id</option>
+						<option value="roomName">Room Name</option>
+						<option selected="selected" value="">No Sort</option>
+				</select></td>
+				</tr>
+					<tr>
+				<td>Sort By Location</td>
+				<td>:<select ng-model="room_location" class="select" ng-change="changeView(room_location)">
+						<option value="B1-G1">B1-Block</option>
+						<option value="B2-G1">B2-Block</option>
+						<option value="B3-G1">B3-Block</option>
+						<option value="B4-G1">B4-Block</option>
+						<option value="B5-G1">B5-Block</option>
+						<option value="B6-G1">B6-Block</option>
+						<option value="B7-G1">B7-Block</option>
+						<option selected="selected" value="">No Sort</option>
+				</select></td>
+			</tr>
+				<tr>
+				<td>Sort By Floor Details</td>
+				<td>:<select ng-model="floor_details" class="select" ng-change="changeView(floor_details)">
+						<option value="first floor">First Floor</option>
+						<option value="sencond floor">Second Floor</option>
+						<option value="third floor">Third Floor</option>
+						<option value="fourth floor">Fourth Floor</option>
+						<option value="fifth floor">Fifth Floor</option>
+						<option value="sixth floor">Sixth Floor</option>
+						<option value="seventh floor">Seventh Floor</option>
+						<option selected="selected" value="">No Sort</option>
+				</select></td>
+			</tr>
+			</table>
+			<br>
+			<div>
+			<table border="1">
+					<tr>
+						<th>SI.No</th>
+						<th>Room</th>
+						<th>Details</th>
+					<tr>
+					
+					<tr
+						ng-repeat="book in books  | filter:search_item | orderBy:order_item|filterunissued:show_item|filter:room_location|filter:floor_details"
+						class="LoginFormDiv"  >
+						<td>{{$index+1}}</td>
+						<td><img src={{book.imgUrl}} style="height: 60%; width: 100%;" /></td>
+						<td highlight style="width: 240px;color:cornflowerblue">Room Id
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{book.roomId}}<br>
+							Room Name &nbsp;&nbsp;&nbsp;&nbsp;:{{book.roomName}}<br>
+							Availability
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{book.availability}}<br>
+					        Location
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{book.location}}<br>
+							Floor Detail
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{book.floorDetails}}<br>
+							<br>
+							<div ng-show="book.availability!='Yes'">
+								<button ng-disabled='true' class="disInline">Book Room</button>
+								<button  class="bookRoom" ng-click="returnFun(book.roomId)">Cancel Room</button>
+							</div>
+                           <div ng-show="book.availability=='Yes'">
+								<button  class="bookRoom" ng-click="issue(book.roomId)";>Book room</button>
+								<button ng-disabled='true' class="disInline">Cancel Room</button>
+							</div>
+
+						</td>
+					</tr>
+					
+				</table>
+                </div> 
+            <br>               
+            
+    </div>
+    </div>
+         <!-- Link back to default route -->
+           <a href="#/AddNewRoom">Add New Meeting Room </a> <br>
+         <a href="#/Main">Back To Login</a> 

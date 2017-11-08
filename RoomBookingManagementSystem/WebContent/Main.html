@@ -1,0 +1,63 @@
+<!doctype html>
+<!--Mention the module name to <html> -->
+<html ng-app="bookingApp">
+<head>
+<title>Angular Assignment</title>
+<style type="text/css">
+@import "styles/style.css";
+</style>
+<script src="lib/Angular/angular.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/customservices.js"></script>
+<script src="js/customfilters.js"></script>
+<script src="js/customdirectives.js"></script>
+<script src="js/app.js"></script>
+<!-- code to include js file of custom services, filters -->
+<style type="text/css">
+.css-form input.ng-invalid.ng-dirty {
+	background-color: #FA787E;
+}
+
+.css-form input.ng-valid.ng-dirty {
+	background-color: #78FA89;
+}
+</style>
+</head>
+<body>
+	<script type="text/ng-template" id="Login">
+   <center style="height:100%">
+        <div  align="center"  ng-controller="LoginCtrl">
+       <h2>
+            Login
+        </h2> 
+              
+            <div class="LoginFormDiv">
+                <table border="0">                
+                    <tr>
+                        <td> Username </td>
+                        <td>: <input  class="input" ng-model="userName"/></td>
+                    </tr>
+                    <tr>
+                        <td> Password</td>
+                        <td>: <input type="password" class="input" ng-model="password"/></td>
+                    </tr>                            
+                    <tr>
+                        <td colspan="2">       
+                            <button class="button" ng-click=validate();>Login</button>  
+                        </td>
+                    </tr>  
+                </table>
+                </div>            
+            
+    </div>
+    </center>
+   </script>
+	<center>
+		<div ng-include="'Header.html'"></div>
+		<div ng-view></div>
+		<div ng-include="'Footer.html'" ng-controller="Ctrl"></div>
+	</center>
+
+
+</body>
+</html>

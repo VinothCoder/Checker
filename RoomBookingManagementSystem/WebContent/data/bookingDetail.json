@@ -1,0 +1,58 @@
+ [{
+		"roomId": 101,
+		"roomName": "Atom",
+		"imgUrl":"imgs/images1.jpeg",
+		"availability": "Yes",
+		"location":"B1-G1",
+		"floorDetails":"ground floor"
+	}, {
+		"roomId": 102,
+		"roomName": "Insta",
+		"imgUrl":"imgs/images2.jpeg",
+		"availability": "Yes",
+		"location":"B2-G1",
+		"floorDetails":"first floor"
+	}, {
+		"roomId": 103,
+		"roomName": "Atlantis",
+		"imgUrl":"imgs/images3.jpeg",
+		"availability": "No",
+		"location":"B3-G1",
+		"floorDetails":"second floor"
+	}, {
+		"roomId": 104,
+		"roomName": "Sky Walk",
+		"imgUrl":"imgs/images4.jpeg",
+		"availability": "No",
+		"location":"B4-G1",
+		"floorDetails":"third floor"
+	},{
+		"roomId": 105,
+		"roomName": "Spectular",
+		"imgUrl":"imgs/images1.jpeg",
+		"availability": "Yes",
+		"location":"B5-G1",
+		"floorDetails":"fourth floor"
+	}, {
+		"roomId": 106,
+		"roomName": "Big Screen",
+		"imgUrl":"imgs/images2.jpeg",
+		"availability": "Yes",
+		"location":"B6-G1",
+		"floorDetails":"fifth floor"
+	}, {
+		"roomId": 107,
+		"roomName": "Ultra Tech",
+		"imgUrl":"imgs/images3.jpeg",
+		"availability": "No",
+		"location":"B7-G1",
+		"floorDetails":"sixth floor"
+	}, {
+		"roomId": 108,
+		"roomName": "New Tech",
+		"imgUrl":"imgs/images4.jpeg",
+		"availability": "No",
+		"location":"B1-G1",
+		"floorDetails":"first floor"
+	}
+	]

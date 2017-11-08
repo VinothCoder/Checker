@@ -1,0 +1,74 @@
+
+<!-- This is a partial page. Add Room-->
+
+<div align="center" ng-controller='AddRoomCtrl'>
+
+
+	<h2 ng-style="{'font-style': 'italic','color':'red'}"
+		>{{AddNewRoom}}</h2>
+	<div>
+		<!-- disable html5 validation-->
+		<form class="css-form" name="form" novalidate>
+
+			<table>
+				<tr>
+					<td>Enter Room Id</td>
+					<td>:<input ng-model="roomId" class="input" name="roomId"
+						required ng-pattern="/^[0-9]{3,10}$/"></td>
+					<td>
+						<div class="message" ng-show="form.roomId.$dirty && form.roomId.$invalid">
+							<span  ng-show="form.roomId.$error.required">Plz enter Room
+								Id </span> <span ng-show="form.roomId.$error.pattern">Plz enter
+								Valid Room Id </span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Enter Room Name</td>
+					<td>:<input ng-model="roomName" class="input" name="bookTitle"
+						required ng-pattern="/^[A-Za-z0-9 ]{4,10}$/"></td>
+					<td>
+						<div class="message" ng-show="form.bookTitle.$dirty && form.bookTitle.$invalid">
+							<span ng-show="form.bookTitle.$error.required">Plz enter
+								Room Name </span> <span ng-show="form.bookTitle.$error.pattern">Plz
+								enter Valid Room Name </span>
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Enter Room Location</td>
+					<td>:<input ng-model="location" class="input" name="location"
+						required ng-pattern="/^[A-Za-z0-9-]{4,10}$/"></td>
+					<td>
+						<div class="message" ng-show="form.location.$dirty && form.location.$invalid">
+							<span ng-show="form.location.$error.required">Plz enter
+								Room Location </span> <span ng-show="form.location.$error.pattern">Plz
+								enter Valid Room Location </span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Enter Floor Details</td>
+					<td>:<input ng-model="floorDetails" class="input" name="floorDetails"
+						required ng-pattern="/^[A-Za-z0-9 ]{4,10}$/"></td>
+					<td>
+						<div class="message" ng-show="form.floorDetails.$dirty && form.floorDetails.$invalid">
+							<span ng-show="form.floorDetails.$error.required">Plz enter
+								Floor Details</span> <span ng-show="form.floorDetails.$error.pattern">Plz
+								enter Valid Floor Details </span>
+						</div>
+					</td>
+				</tr>
+				
+			</table>
+
+			<!-- Add appropriate validations-->
+			<br>
+			<!-- Handle the validations appropriately-->
+			<input type="submit" ng-click="addBook()" class="button"
+				value="Add New Room"></input>
+		</form>
+
+	</div>
+</div>

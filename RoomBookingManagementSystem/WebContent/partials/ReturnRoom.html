@@ -1,0 +1,35 @@
+  <!-- This is a partial page. Return Room Page-->
+        
+        <div  align="center" ng-controller="ReturnRoomCtrl">
+        <h2 ng-style="{'font-style': 'italic','color':'red'}"
+			>{{ReturnRoom}}</h2>               
+                <div>
+                    
+                <table border="1">
+                  <tr>
+						<th>Image</th>
+						<th>Details</th>
+					<tr>
+					<tr
+						class="LoginFormDiv">
+						<td><img src={{book.imgUrl}} style="height: 60%; width: 100%;" /></td>
+						<td style="color:cornflowerblue">Booking Id
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{book.roomId}}<br>
+							Room Name &nbsp;&nbsp;&nbsp;:{{book.roomName}}<br>
+							Availability
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{book.availability}}<br>
+							
+							Location
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{book.location}}<br>
+							Floor Detail
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{book.floorDetails}}<br>
+							<br>
+							<button  class="bookRoom" ng-click="returnFun(book.bookingId)">Cancel Room</button>
+
+						</td>
+					</tr>
+                    
+                </table>
+                </div>
+    </div>
+    
